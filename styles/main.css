@@ -1,0 +1,324 @@
+html {
+    position: relative;
+    font-family: 'Comic Neue', sans-serif;
+    background: url(../assets/bg.jpg);
+}
+
+html:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.75);
+}
+
+body {
+    position: relative;
+}
+
+.wrap {
+    margin-top: 60px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.appFrame {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.faceContainer{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.eyesContainer{
+    position: absolute;
+    width: 206px;
+    height: 84px;
+    top: 115px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.noseContainer{
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    top: 194px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.mouthContainer{
+    position: absolute;
+    width: 190px;
+    height: 60px;
+    top: 268px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.earsContainer{
+    position: absolute;
+    width: 394px;
+    height: 96px;
+    top: 133px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.personWrap .customButton {
+    margin: 16px auto 0;
+}
+
+.customButton {
+    display: block;
+    border: 1px solid #F43E3E;
+    background: #F43E3E;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: .15s linear;
+    min-width: 180px;
+    border-radius: 10px;
+}
+
+.customButton:hover {
+    background-color: #6667AB;
+    border-color: #6667AB;
+}
+
+.personContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.personMain {
+    flex: 0 0 auto;
+    margin-right: 24px;
+}
+
+.personSidebar {
+    width: 300px;
+    flex: 0 0 auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.sidebarTitle {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.sidebarTitleCategory {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.featuresList li {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.featuresList li:nth-child(n+2) {
+    margin-top: 5px;
+}
+
+.featuresList li .color {
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+}
+
+.btnSidebar {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.btnSidebar svg {
+    pointer-events: none;
+}
+
+.btnSidebar svg * {
+    transition: .15s linear;
+    fill: #F43E3E;
+}
+
+.btnSidebar:hover svg * {
+    transition: .15s linear;
+    fill: #6667AB;
+}
+
+.btnCloseSidebar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.btnOpenSidebar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.sidebarPanel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #FFF;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    transition: .15s linear;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.sidebarPanelContent {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+
+.sidebarPanelOpened .sidebarPanel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebarPanelTitle {
+    font-size: 19px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+.checkboxShape {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 300px;
+    cursor: pointer;
+}
+
+.checkboxShape input {
+    display: none;
+}
+
+.checkboxShape .label {
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 300px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+    transition: all .2s linear;
+}
+
+.checkboxShape:hover .label {
+    border-color: #F43E3E;
+}
+
+.checkboxShape input:checked ~ .label {
+    background: #F43E3E;
+    border-color: #F43E3E;
+    color: #FFFFFF;
+}
+
+.buttonSubmit {
+    margin: 20px auto 0;
+    display: block;
+    border: 1px solid #F43E3E;
+    background: #F43E3E;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: .15s linear;
+    min-width: 160px;
+    border-radius: 10px;
+}
+
+.buttonSubmit:hover {
+    background-color: #6667AB;
+    border-color: #6667AB;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: -4px;
+    margin-bottom: 8px;
+}
+
+.inputBoxItem {
+    display: inline-flex;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.formTitle {
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.formSubtitle {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-bottom: 6px
+}
+
+
+
+
